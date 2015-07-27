@@ -22,14 +22,3 @@ Addresses:  183.79.235.148
           183.79.198.116
           183.79.131.212
 Aliases:  www.yahoo.co.jp
-
-
-C:\Users>nslookup www.yahoo.co.jp
-
-権限のない回答:
-名前:    www.g.yahoo.co.jp
-Addresses:  183.79.235.148
-          183.79.227.90
-          183.79.198.116
-          183.79.131.212
-Aliases:  www.yahoo.co.jp
