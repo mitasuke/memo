@@ -1,0 +1,32 @@
+参考：http://www-01.ibm.com/support/knowledgecenter/SSAV7B_633/com.ibm.director.events.helps.doc/fqm0_r_events_cim_system_raid_pfa_drive.html?lang=ja
+
+＜HDD障害の事前障害予知機能(PFA)活用について＞
+http://www-06.ibm.com/jp/domino04/pc/support/Sylphd07.nsf/jtechinfo/SYJ0-00CD645
+
+
+PFAは「Predictive Failure Analysis」の略であり、障害予知解析と呼ばれる。
+
+PFAがRAID構成内のハードディスクドライブで検出された時、「RAID PFA ドライブ」イベントが発生する。
+
+PFAが検出された場合、ハードディスク障害が発生しそうな状況らしいので、早めに交換した方が良さそう？
+（PFA detected for drive とか・・・。）
+
+以下「HDD障害の事前障害予知機能(PFA)活用について」より：
+=================================================================================================
+HDDにはPFA(Predictive Failure Analisys)と呼ばれる障害障害予知機能があります。
+これは、HDD内部にて、色々な状況を監視し、総合的に判断し、24時間から48時間以内に障害が
+発生する可能性が高いことを事前に通知するものです。
+
+過去に、HDDが複数個障害を起こし、RAID1/RAID5などの冗長性のある構成でも二重障害となり、
+データ損失に発展した事例が報告されています。
+いずれも、最初のHDDが障害前にPFAの警告を通知しており、その段階で交換していれば、
+二重障害は防止出来たと考えられます。
+
+PFAの警告は、ServeRAID ManagerやIBM Directorなどで検出可能です。
+ServeRAIDを使用する場合には、少なくとも、ServeRAID Managerを導入の上、
+常に起動しておくことを推奨します。
+また、V6.0以降の場合、Manager本体は起動せずとも、Agentが導入されていて Windows NT/Windows2000 で
+あれば、Event Logに通知することも出来ます。
+そして、PFAの警告が通知された場合には、HDDの障害と見なして、交換する必要がありますので、
+保守を依頼して下さい。
+=================================================================================================
