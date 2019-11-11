@@ -88,3 +88,23 @@ putty.iniに設定が書き込まれるので、移行したい時にiniファ�
 ＜フォントを変える＞
 [ウィンドウ] - [外観] と進み、フォントの設定の [変更] を押す。
 フォント名を Terminal から MS明朝 に変える。（何でもいいけど）
+
+
+＜秘密鍵を自動で読み込ませる＞
+PC起動（Pageant起動）後に自動的に秘密鍵を読み込ませたい。
+
+参考：
+https://qiita.com/reflet/items/6d74851f033ddc325df9
+
+ファイル名を指定して実行 に shell:startup を入力してフォルダを開いて、
+設置しておいた pageant のショートカットを右クリックする。
+
+[プロパティ] → [ショートカット]タブ の リンク先 に、
+秘密鍵のパスを追加する。
+
+修正前：
+"C:\Program Files\PuTTY\pageant.exe"
+修正後：
+"C:\Program Files\PuTTY\pageant.exe" "C:\秘密鍵の設置先パス\id_rsa.pt.ppk"
+
+これで 適用 → OK
